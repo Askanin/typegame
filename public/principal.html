@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Alura Typer</title>
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    
+</head>
+<body>
+    <!-- Seja bem vindo ao curso de jQuery :) -->
+    <div class="container">
+        <h1 class="center">Alura Typer</h1>
+        <p class="frase center">Esta frase tem belas palavras.</p>
+
+        <ul class="informacoes center">
+            <li>
+                <i class="small material-icons icones">description</i>
+                <span id="tamanhoFrase">5</span> palavras
+            </li>
+            <li>
+                <i class="small material-icons icones">query_builder</i>
+                <span id="tempo">10</span> segundos
+            </li>
+        </ul>
+
+        <textarea class="campo-digitacao" cols="40" rows="8"></textarea>
+        
+        <div class="botoes">
+            <button class="btn-floating btn-large waves-effect waves-light red" id="reset">
+                <i class="material-icons">restore</i>
+            </button>
+        </div>
+        
+        <ul class="center">
+            <li><span id="contador-caracteres">0</span> caracteres</li>
+            <li><span id="contador-palavras">0</span> palavras</li>
+        </ul>
+
+        <section class="placar">
+            <h3 class="center">Placar</h3>
+            <table class="centered borded">
+                <thead>
+                   <tr>
+                       <th>Nome</th>
+                       <th>No. de Palavras</th>
+                       <th>Remover</th>
+                   </tr> 
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Douglas</td>
+                        <td>10</td>
+                        <td>
+                            <a href="#" class="botao-remover">
+                                <i class="small material-icons">delete</i>
+                            </a>
+                        </td>  
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+    </div>
+    
+
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
