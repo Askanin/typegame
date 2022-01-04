@@ -18,6 +18,12 @@ function atualizaTamanhoFrase(){
     tamanhoFrase.text(numPalavras);
 }
 
+function atualizaTempoInicial(tempo){
+    tempoInicial = tempo;
+    $("#tempo").text(tempo);
+}
+
+
 function incializaContadores(){
     campo.on("input", function(){
         var conteudo = campo.val();
@@ -30,8 +36,8 @@ function incializaContadores(){
 }
 
 function inicializaCronometro(){
-    var tempoRestante = $("#tempo").text();
     campo.one("focus", function(){
+        var tempoRestante = $("#tempo").text();
         $("#reset").attr("disabled", true);
         var cronometroId = setInterval(function(){
             tempoRestante--;
@@ -46,8 +52,8 @@ function inicializaCronometro(){
 }
 
 function inicializaMarcadores(){
-    var frase = $(".frase").text();
     campo.on("input",function(){
+    var frase = $(".frase").text();
     var digitado = campo.val();
     var comparavel = frase.substr(0, digitado.length);
     
