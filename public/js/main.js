@@ -7,6 +7,7 @@ $(function(){
     inicializaCronometro();
     inicializaMarcadores();
     $("#reset").click(reiniciaJogo);
+    $(".botao-remover").click(removeLinha);
 
 });
 
@@ -67,28 +68,6 @@ function finalizaJogo(){
     inserePlacar();
                 
 }
-
-function inserePlacar(){
-    var tabela = $(".placar").find("tbody");
-    var usuario = "Douglas";
-    var numPalavras = $("#contador-palavras").text();
-    var botaoRemover = "<a href='#'><i class='small material-icons'>delete</i></a>";
-
-    var linha = "<tr>" + 
-                    "<td>"+ usuario +"</td>"+
-                    "<td>"+ numPalavras +"</td>"+
-                    "<td>"+ botaoRemover +"</td>"+
-                "</tr>";
-
-    tabela.append(linha);
-}
-
-$(".botao-remover").click(function(event){
-    event.preventDefault();
-    $(this).parent().parent().remove();
-})
-
-
 
 function reiniciaJogo(){
     campo.attr("disabled",false);
