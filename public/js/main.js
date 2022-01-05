@@ -8,6 +8,14 @@ $(function(){
     inicializaMarcadores();
     $("#reset").click(reiniciaJogo);
     $(".botao-remover").click(removeLinha);
+    atualizaPlacar();
+    $("#usuarios").selectize({
+        create: true,
+        sortField: "text",
+      });
+    $(".tooltip").tooltipster({
+        trigger: "custom"
+    });
 
 });
 
@@ -22,7 +30,6 @@ function atualizaTempoInicial(tempo){
     tempoInicial = tempo;
     $("#tempo").text(tempo);
 }
-
 
 function incializaContadores(){
     campo.on("input", function(){
